@@ -1,0 +1,17 @@
+//web api
+<p id="demo"></p>
+<script>
+    const a = docment.getElementById("demo");
+    function getLocation(){
+        try{
+            navigator.getlocation.getCurrentPosition(showPosition);
+           }
+           catch{
+               a.innerHTML = err ;
+           }
+
+    }
+    function showPosition(){
+        a.innerHTML = "Latitude:"+position.coords.latitude+
+        "<br>Longitude:"+ position.coord.longitude;
+    }

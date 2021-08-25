@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id='demo'>welcome</p>
+  <script>
+      //using javascript to pass html value
+      //document.getElementById("demo").innerHTML = 'hello';
+      //document.getElementsByClassName
+      //document.getElementsByTagName
+
+      //change element
+     // document.getElementById("demo").style = 'hello';
+      //document.getElementById("demo").setAttribute = 'hello';
+       
+      //adding and deleting HTML elements
+      document.createElement
+      document.removeChild
+      document.appendChild
+      document.replaceChild
+      document.write
+
+      //EVENT HANDLERS
+      document.getElementById("demo").onclick = function{
+          alert("event triggered by onclick")
+      };
+
+      </script>
+      <p class="intro"> welcome </p>
+      <p id="demo"></p>
+      <script>
+          const a = document.querySelectorAll("p.intro");
+          document.getElementById("demo").innerHTML = 'the paragrah (index 0) with class = "intro" is: ' + A[0].innerHTML ;
+     
+     </script>
+    
+     <p class="intro"> welcome </p>
+     <script>
+         documet.getElementById("intro").stylecolour='blue';
+
+         </script>
+             <p class="intro"> welcome </p>
+             <button type="button" onclick="document.getElementById ('intro').style.color='red'">click me to change colour</button>
+
+             <h2 onclick="this.innerHTML='iNTERNSHIP'">web design and develeopment </h2>
+             <div onmouseover="mover(this)" onmouseout="mout(this)" style="background-color: aquamarine;width: 100px;height: 50px;padding: 40px;color: beige;">mouse over this area</div>
+             <script>
+                 function mover(obj){
+                     obj.innerHTML="Thank You"
+                 }
+                 function mout(obj){
+                     obj.innerHTML="hi there"
+                 }
+                 </script>
+                 <button onclick=""></button>
+                 //web api
+                 <p id="demo"></p>
+                 <script>
+                     const a = docment.getElementById("demo");
+                     function getLocation(){
+                         try{
+                             navigator.getlocation.getCurrentPosition(showPosition);
+                            }
+                            catch{
+                                a.innerHTML = err ;
+                            }
+
+                     }
+                     function showPosition(){
+                         a.innerHTML = "Latitude:"+position.coords.latitude+
+                         "<br>Longitude:"+ position.coord.longitude;
+                     }
+                 </script>
+                 //form api
+                 <br><br><br>
+                 <input type="number" id="id1" min='100' max='500'>
+                 <button onclick="myFunction()">SUBMIT</button>
+                 <p id='demo'></p>
+                 <script>
+                     function myFunction(){
+                         const obj= document.getElementById('id1');
+                         if (!obj.checkValidity()){
+                             document.getElementById("demo").innerHTML= obj.validationMessage;
+                         }
+                         else{
+                             document.getElementById("demo").innerHTML="input ok";
+                         }
+                     }
+                 </script>
+
+    </body>
+</html>
